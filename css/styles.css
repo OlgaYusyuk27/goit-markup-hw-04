@@ -312,9 +312,9 @@ margin-bottom: 10px;
 .team-list .social-link:hover .social-icon:hover{
     fill: var(--first-color);
 }
-/* .team-list .social-link:focus .social-icon:hover{
+.team-list .social-link:focus .social-icon:focus{
     fill: var(--first-color);
-} */
+}
 /* стилізація Портфоліо основного вмісту*/
 .portfolio{
     padding-top: 94px;
