@@ -55,8 +55,8 @@ li {
 }
 .footer{
     background-color: var(--secondary-background-color);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 56px;
+    padding-bottom: 64px;
 }
 .logo{
     font-family: 'Raleway';
@@ -83,9 +83,7 @@ li {
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    
     display: flex;
-
     margin-left: 93px;
 }
 .nav-link{
@@ -96,12 +94,19 @@ li {
 }
 .item{
     display: block;
-
-   padding-top: 32px;
-   padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-.header-mail, .header-tel{
-    color: var(--primary-text-color);
+.header-mail-item, .header-tel-item{
+    color: var(--primary-text-color); 
+}
+.header-mail-item:hover, .header-tel-item:hover, 
+.header-mail-item:focus, .header-tel-item:focus{
+    color: var(--second-color);
+}
+.header-mail-item:hover, .header-tel-item:hover, 
+.header-mail-item:focus, .header-tel-item:focus, .header-mail-icon, .header-tel-icon{
+    color: var(--second-color);
 }
 .footer-mail, .footer-tel{
     color: var(--footer-text-address-color);
@@ -122,13 +127,13 @@ li {
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-
     display: flex;
-
-    margin-left: auto;
+    margin-left: 318px;
 }
-.header-contacts .item + .item{
-    margin-left: 50px;
+.header-mail-icon{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 .footer-contacts{
     font-style: normal;
@@ -146,6 +151,50 @@ li {
 .address{
     margin-top: 20px;
 }
+.container.footer{
+    display: flex;
+    justify-content: flex-start;
+ }
+.footer-social-contacts{
+    margin-left: 70px;
+}
+.footer-social-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--first-color);
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.social-contacts-list{
+    display: flex;
+}
+.social-contacts-list .footer-icon-item{
+    width: 44px;
+    height: 44px;  
+}
+.social-contacts-list .footer-icon-item:not(:last-child){
+    margin-right: 10px;
+} 
+.footer-social-link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+.footer-social-icon{
+    fill: none;
+    fill: var(--first-color);
+}
+.footer-social-link:hover, .footer-social-link:focus{
+    color: var(--second-color);
+}
 /* стилізація Студія секції solutions (Ефективні рішення для вашого бізнесу)*/
 .solutions-title {
     color: var(--first-color);
@@ -156,16 +205,13 @@ li {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
-
     margin-bottom: 30px;
     margin-left: 236px;
     width: 696px;
  }
 .solutions{
     background-color: var(--secondary-background-color);
-
     text-align: center;
-
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
@@ -180,14 +226,11 @@ li {
 .studio-button{
     color: var(--first-color);
     background-color: var(--second-color);
-
     border-color: transparent;
     display: inline-block;
     border-radius: 4px;
     padding: 10px 32px;
-
     cursor: pointer;
-
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
@@ -215,16 +258,47 @@ font-weight: 700;
 font-size: 14px;
 line-height: calc(16 / 14);
 letter-spacing: 0.03em;
-
 text-transform: uppercase;
 margin-bottom: 10px;
+margin-top: 30px;
 }
 .advantage-text{
     color: var(--primary-text-color);
-
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
+}
+.advantage-details::before{
+    content: ' ';
+    display: inline-block;
+    background-image: url(../images/antenna.svg);
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+.advantage-punctuality::before{
+    content: ' ';
+    display: inline-block;
+    background-image: url(../images/clock.svg);
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+.advantage-planning::before{
+    content: ' ';
+    display: inline-block;
+    background-image: url(../images/diagram.svg);
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+.advantage-technologies::before{
+    content: ' ';
+    display: inline-block;
+    background-image: url(../images/astronaut.svg);
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
 }
 /* стилізація Студія секції section Чим займаємося або і Наша команда */
 .section-title{
@@ -233,7 +307,6 @@ margin-bottom: 10px;
     line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
-
     margin-bottom: 50px;
 }
 .work-list{
@@ -247,7 +320,6 @@ margin-bottom: 10px;
 /* стилізація Студія секції section (Наша команда)*/
 .section.team{
     background-color: var(--third-background-color);
-
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -260,12 +332,10 @@ margin-bottom: 10px;
     font-size: 16px;
     line-height: calc(19 / 16);
     letter-spacing: 0.03em;
-
     margin-bottom: 10px;
 }
 .section-title-text{
     color: var(--primary-text-color);
-
     font-size: 16px;
     line-height: calc(19 / 16);
     letter-spacing: 0.03em;
@@ -309,11 +379,27 @@ margin-bottom: 10px;
 .team-list .social-icon{
     fill: var(--third-color-icons);
 }
-.team-list .social-link:hover .social-icon:hover{
+.team-list .social-link:hover .social-icon{
     fill: var(--first-color);
 }
-.team-list .social-link:focus .social-icon:focus{
+.team-list .social-link:focus .social-icon{
     fill: var(--first-color);
+}
+/* стилізація Студія секції section (Постійні клієнти)*/
+.section.clients{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients-icon{
+    border: 1px solid var(--third-color-icons);
+    border-radius: 4px;
+}
+.clients-list{
+    display: flex;
+    justify-content: space-between;
+}
+.clients-icon:hover, .clients-icon:focus{
+    color: var(--second-color);
 }
 /* стилізація Портфоліо основного вмісту*/
 .portfolio{
@@ -328,13 +414,17 @@ margin-bottom: 10px;
 .filter .filter-item + .filter-item{
     margin-left: 8px;
 }
+.filter-item:hover, .filter-item:focus{
+    box-shadow: 
+    1px 4px 6px rgba(0, 0, 0, 0.16), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .portfolio-button{
     color: var(--main-text-color);
     background-color: var(--third-background-color);
     border: none;
-
     cursor: pointer;
-    
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -342,7 +432,6 @@ margin-bottom: 10px;
     text-align: center;
     letter-spacing: 0.03em;
     border-radius: 4px;
-
     padding: 6px 22px;
 }
 .portfolio-button:hover, .portfolio-button:focus{
@@ -357,9 +446,7 @@ margin-bottom: 10px;
 }
 .card-subtitle{
     color: var(--main-text-color);
-
     margin-bottom: 4px;
-   
     font-weight: 700;
     font-size: 18px;
     line-height: calc(36 / 18);
@@ -367,7 +454,6 @@ margin-bottom: 10px;
 }
 .card-text{
     color: var(--primary-text-color);
-
     font-size: 16px;
     line-height: calc(30 / 16);
     letter-spacing: 0.03em;
@@ -379,7 +465,7 @@ margin-bottom: 10px;
 }
 .cards-list .card-item{
     flex-basis: calc((100% - 60px) / 3);
-    }
+}
 .cards-list .card-item:nth-last-child(-n + 3){
     margin-bottom: 0;
 }
@@ -387,4 +473,10 @@ img{
     display: block; 
     width: 100%; 
     height: auto;
+}
+.cards-list .card-item:hover{
+    box-shadow: 
+    1px 4px 6px rgba(0, 0, 0, 0.16), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
